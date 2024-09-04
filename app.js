@@ -6,14 +6,14 @@ const userRouter = require('./routes/userRoutes');
 const app = express();
 
 //1.MIDDLEWARES
-app.use(morgan('dev'));
+//app.use(morgan('dev'));
 app.use(express.json());
 
-//middleware
-app.use((req, res, next) => {
-  req.requestTime = new Date().toISOString();
-  next();
-});
+// //middleware
+// app.use((req, res, next) => {
+//   req.requestTime = new Date().toISOString();
+//   next();
+// });
 
 //In Express Order matter
 app.use((req, res, next) => {
